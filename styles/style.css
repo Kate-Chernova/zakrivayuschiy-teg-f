@@ -127,15 +127,6 @@
   }
 }
 
-.card__content { 
-  display: flex;
-  flex-direction: column;
-  gap: 27px;
-  padding: 25px;
-  font-size: 18px;
-  line-height: 21px;
-}
-
 .card__label {
   position: absolute;
   top: clamp(0.625rem, 0.48rem + 0.62vw, 0.9375rem);
@@ -191,7 +182,7 @@
   background: #fff;
   border-radius: clamp(0.25rem, 0.211rem + 0.17vw, 0.34375rem);
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: 0.2s ease;
   text-decoration: none;
   color: #333;
 }
