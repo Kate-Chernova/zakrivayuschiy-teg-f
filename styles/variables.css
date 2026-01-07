@@ -1,13 +1,36 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-     --main-font: 'Inter-Variable';
+    --main-font: 'Inter-Variable';
     --accent-font: 'PressStart2P';
-    --weight-font-title: 758;
-    --weight-font-main: 375;
+    --card-title-font-weight: 700;
+    --main-font-weight: 400;
     --gradient-liner-vertical: repeating-linear-gradient(90deg, #d3d3d3 0, #d3d3d3 2px, transparent 2px, transparent 4px);
     --gradient-liner-horizontal: repeating-linear-gradient(#d3d3d3 0, #d3d3d3 2px, transparent 2px, transparent 4px);
     --gradient-blackout: linear-gradient(to bottom,#e7e7e7 0.01%,#1a1a1a 100%);
     --label-stroke-color: #fff;
-    --icon-contour: #000;
-    --icon-main: #FF0000;
+    --heart-contour-color: #000;
+    --heart-main-color: #FF0000;
+    --heart-sparks-color: #ff0000;
+    --page-width: clamp(20rem, 13.2143rem + 33.9286vw, 43.75rem);
+    --header-title-font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+    --save-button-inline-size: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
+    --header-sub-font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+
+}
+
+@media (max-width: 425px) {
+  :root {
+    --page-width: 100vw;
+  }
+}
+
+@media (width < 375px) {
+  :root {
+    --header-title-font-size: clamp(
+      1.875rem,
+      -5.0341rem + 34.5455vw,
+      3.0625rem
+    );
+    --save-button-inline-size: min-content;
+  }
 }

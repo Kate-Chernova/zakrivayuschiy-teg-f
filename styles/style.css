@@ -10,13 +10,19 @@
 
 */
 
+.page__container-inline-size {
+  inline-size: var(--page-width);
+  min-inline-size: 320px;
+  margin-inline: auto;
+}
+
 .page {
   max-inline-size: 700px;
   margin: 100px auto;
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--main-font), "Helvetica", "Arial", sans-serif;
-  font-variation-settings: "wght" var(--weight-font-main);
+  font-variation-settings: "wght" var(--main-font-weight);
   background-image: var(--gradient-liner-horizontal),
     var(--gradient-liner-vertical), var(--gradient-blackout);
   background-size: cover;
@@ -30,7 +36,8 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
-  padding-block: 128px;
+  padding:clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem) 0;
+  margin-block: 100px;
   background-color: #fff;
   border: 2px solid #000;
   font-family: var(--accent-font), fantasy;
@@ -38,15 +45,15 @@
 }
 
 .header__title {
-  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  font-size: var(--header-title-font-size);
   text-decoration: none;
+  margin-block-end: 20px;
 }
 
 .header__subtitle {
-  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
-  margin-block: 19px 23px;
-  font-weight: 400;
-  line-height: 23px;
+  font-size:  var(--header-sub-font-size);
+  text-transform: uppercase;
+  
 }
 
 .main {
@@ -65,7 +72,7 @@
 .card__title {
   display: flex;
   align-items: center;
-  font-variation-settings: 'wght' var(--weight-font-title);
+  font-variation-settings: "wght" var(--card-title-font-weight);
   padding: 4px 10px;
   font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
   line-height: 21.78px;
@@ -113,7 +120,9 @@
 }
 
 .card__description {
-  font-size: var(--card-text-size);
+  line-height: 21px;
+  font-size: 1.125rem;;
+
 }
 
 .card__image {
@@ -153,10 +162,6 @@
   cursor: pointer; 
 }
 
-.button:hover {
-  background: #f8f9fa;
-  border-color: #ccc;
-}
 
 .button::before {
   content: "";
@@ -278,11 +283,9 @@
 }
 
 .button-confirm {
-  position: relative;
-  width: 100%;
-  padding: 10px 0;
+  inline-size: 100%;
+  padding: 12.5px;
   text-transform: uppercase;
-  background: var(--page-background);
 }
 
 /* filters */
@@ -329,8 +332,8 @@
   }
 
   .card__image-label {
-    top: 26px;
-    right: 11px;
+    top: 25px;
+    right: 25px;
   }
 
   .card__content {
